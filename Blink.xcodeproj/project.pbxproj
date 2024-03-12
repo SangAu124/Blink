@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EA5A0842B9FE22B0025220D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA5A0832B9FE22B0025220D /* ComposableArchitecture */; };
+		8EA5A08D2B9FE2FA0025220D /* dummyDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A08C2B9FE2FA0025220D /* dummyDomain.swift */; };
+		8EA5A08F2B9FE3080025220D /* dummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A08E2B9FE3080025220D /* dummyData.swift */; };
 		8EBFDC672B9FDA35007D86CE /* BlinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFDC662B9FDA35007D86CE /* BlinkApp.swift */; };
 		8EBFDC692B9FDA35007D86CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFDC682B9FDA35007D86CE /* ContentView.swift */; };
 		8EBFDC6B2B9FDA37007D86CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EBFDC6A2B9FDA37007D86CE /* Assets.xcassets */; };
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8EA5A08C2B9FE2FA0025220D /* dummyDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyDomain.swift; sourceTree = "<group>"; };
+		8EA5A08E2B9FE3080025220D /* dummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyData.swift; sourceTree = "<group>"; };
 		8EBFDC632B9FDA35007D86CE /* Blink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBFDC662B9FDA35007D86CE /* BlinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkApp.swift; sourceTree = "<group>"; };
 		8EBFDC682B9FDA35007D86CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA5A0842B9FE22B0025220D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +77,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EA5A0862B9FE2760025220D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8EBFDC682B9FDA35007D86CE /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8EA5A0872B9FE2810025220D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A08C2B9FE2FA0025220D /* dummyDomain.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8EA5A0882B9FE2880025220D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8EBFDC662B9FDA35007D86CE /* BlinkApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8EA5A0892B9FE2AD0025220D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A08E2B9FE3080025220D /* dummyData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8EA5A08A2B9FE2B40025220D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A0882B9FE2880025220D /* Application */,
+				8EA5A0892B9FE2AD0025220D /* Data */,
+				8EA5A0872B9FE2810025220D /* Domain */,
+				8EA5A0862B9FE2760025220D /* Presentation */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8EA5A08B2B9FE2C80025220D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8EBFDC6A2B9FDA37007D86CE /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		8EBFDC5A2B9FDA35007D86CE = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +151,8 @@
 		8EBFDC652B9FDA35007D86CE /* Blink */ = {
 			isa = PBXGroup;
 			children = (
-				8EBFDC662B9FDA35007D86CE /* BlinkApp.swift */,
-				8EBFDC682B9FDA35007D86CE /* ContentView.swift */,
-				8EBFDC6A2B9FDA37007D86CE /* Assets.xcassets */,
+				8EA5A08B2B9FE2C80025220D /* Resource */,
+				8EA5A08A2B9FE2B40025220D /* Source */,
 				8EBFDC6C2B9FDA37007D86CE /* Preview Content */,
 			);
 			path = Blink;
@@ -143,6 +199,9 @@
 			dependencies = (
 			);
 			name = Blink;
+			packageProductDependencies = (
+				8EA5A0832B9FE22B0025220D /* ComposableArchitecture */,
+			);
 			productName = Blink;
 			productReference = 8EBFDC632B9FDA35007D86CE /* Blink.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +274,9 @@
 				Base,
 			);
 			mainGroup = 8EBFDC5A2B9FDA35007D86CE;
+			packageReferences = (
+				8EA5A0822B9FE22B0025220D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 8EBFDC642B9FDA35007D86CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +319,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA5A08F2B9FE3080025220D /* dummyData.swift in Sources */,
+				8EA5A08D2B9FE2FA0025220D /* dummyDomain.swift in Sources */,
 				8EBFDC692B9FDA35007D86CE /* ContentView.swift in Sources */,
 				8EBFDC672B9FDA35007D86CE /* BlinkApp.swift in Sources */,
 			);
@@ -588,6 +652,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EA5A0822B9FE22B0025220D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EA5A0832B9FE22B0025220D /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EA5A0822B9FE22B0025220D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EBFDC5B2B9FDA35007D86CE /* Project object */;
 }
