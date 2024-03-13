@@ -10,6 +10,13 @@
 		8EA5A0842B9FE22B0025220D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA5A0832B9FE22B0025220D /* ComposableArchitecture */; };
 		8EA5A08D2B9FE2FA0025220D /* dummyDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A08C2B9FE2FA0025220D /* dummyDomain.swift */; };
 		8EA5A08F2B9FE3080025220D /* dummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A08E2B9FE3080025220D /* dummyData.swift */; };
+		8EA5A0922BA186950025220D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A0912BA186950025220D /* HomeView.swift */; };
+		8EA5A0952BA186A80025220D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A0942BA186A80025220D /* SearchView.swift */; };
+		8EA5A0982BA186C90025220D /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A0972BA186C90025220D /* DiaryView.swift */; };
+		8EA5A09B2BA186E70025220D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A09A2BA186E70025220D /* MyPageView.swift */; };
+		8EA5A09F2BA187190025220D /* NewDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A09E2BA187190025220D /* NewDiaryView.swift */; };
+		8EA5A0A22BA1874E0025220D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A0A12BA1874E0025220D /* TabBarView.swift */; };
+		8EA5A0A42BA18D710025220D /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5A0A32BA18D710025220D /* HomeReducer.swift */; };
 		8EBFDC672B9FDA35007D86CE /* BlinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFDC662B9FDA35007D86CE /* BlinkApp.swift */; };
 		8EBFDC692B9FDA35007D86CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFDC682B9FDA35007D86CE /* ContentView.swift */; };
 		8EBFDC6B2B9FDA37007D86CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EBFDC6A2B9FDA37007D86CE /* Assets.xcassets */; };
@@ -39,6 +46,13 @@
 /* Begin PBXFileReference section */
 		8EA5A08C2B9FE2FA0025220D /* dummyDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyDomain.swift; sourceTree = "<group>"; };
 		8EA5A08E2B9FE3080025220D /* dummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyData.swift; sourceTree = "<group>"; };
+		8EA5A0912BA186950025220D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8EA5A0942BA186A80025220D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		8EA5A0972BA186C90025220D /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		8EA5A09A2BA186E70025220D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		8EA5A09E2BA187190025220D /* NewDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiaryView.swift; sourceTree = "<group>"; };
+		8EA5A0A12BA1874E0025220D /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		8EA5A0A32BA18D710025220D /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
 		8EBFDC632B9FDA35007D86CE /* Blink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBFDC662B9FDA35007D86CE /* BlinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkApp.swift; sourceTree = "<group>"; };
 		8EBFDC682B9FDA35007D86CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +94,12 @@
 		8EA5A0862B9FE2760025220D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				8EA5A0A02BA187420025220D /* Common */,
+				8EA5A0902BA186850025220D /* Home */,
+				8EA5A0932BA186970025220D /* Search */,
+				8EA5A09C2BA187050025220D /* NewDiary */,
+				8EA5A0962BA186AD0025220D /* Diary */,
+				8EA5A0992BA186D80025220D /* MyPage */,
 				8EBFDC682B9FDA35007D86CE /* ContentView.swift */,
 			);
 			path = Presentation;
@@ -126,6 +146,55 @@
 				8EBFDC6A2B9FDA37007D86CE /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		8EA5A0902BA186850025220D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A0912BA186950025220D /* HomeView.swift */,
+				8EA5A0A32BA18D710025220D /* HomeReducer.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8EA5A0932BA186970025220D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A0942BA186A80025220D /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8EA5A0962BA186AD0025220D /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A0972BA186C90025220D /* DiaryView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		8EA5A0992BA186D80025220D /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A09A2BA186E70025220D /* MyPageView.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		8EA5A09C2BA187050025220D /* NewDiary */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A09E2BA187190025220D /* NewDiaryView.swift */,
+			);
+			path = NewDiary;
+			sourceTree = "<group>";
+		};
+		8EA5A0A02BA187420025220D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5A0A12BA1874E0025220D /* TabBarView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		8EBFDC5A2B9FDA35007D86CE = {
@@ -320,8 +389,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA5A08F2B9FE3080025220D /* dummyData.swift in Sources */,
+				8EA5A09F2BA187190025220D /* NewDiaryView.swift in Sources */,
+				8EA5A0A42BA18D710025220D /* HomeReducer.swift in Sources */,
+				8EA5A09B2BA186E70025220D /* MyPageView.swift in Sources */,
 				8EA5A08D2B9FE2FA0025220D /* dummyDomain.swift in Sources */,
 				8EBFDC692B9FDA35007D86CE /* ContentView.swift in Sources */,
+				8EA5A0982BA186C90025220D /* DiaryView.swift in Sources */,
+				8EA5A0922BA186950025220D /* HomeView.swift in Sources */,
+				8EA5A0952BA186A80025220D /* SearchView.swift in Sources */,
+				8EA5A0A22BA1874E0025220D /* TabBarView.swift in Sources */,
 				8EBFDC672B9FDA35007D86CE /* BlinkApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
