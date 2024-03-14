@@ -21,6 +21,7 @@ struct HomeView: View {
           Text("블링블링 Blink")
             .bold()
             .lineLimit(1)
+            .font(.title3)
           
           Spacer()
           
@@ -29,6 +30,7 @@ struct HomeView: View {
             store.send(.showCalendarToggled)
           }) {
             Image(systemName: "heart")
+              .foregroundColor(.black)
           }
           
           // 종이비행기 버튼
@@ -36,12 +38,18 @@ struct HomeView: View {
             
           }) {
             Image(systemName: "paperplane")
+              .foregroundColor(.black)
           }
         }
-        .padding()
-        .background(Color.gray.opacity(0.2))
+        .padding(.top)
+        .padding(.trailing)
+        .padding(.leading)
         
-        Spacer()
+        ScrollView {
+          
+        }
+        .frame(width: .infinity, height: .infinity)
+        .ignoresSafeArea()
       }
     }
     .navigationBarTitle("홈")
