@@ -22,7 +22,6 @@ struct HomeView: View {
             .bold()
             .lineLimit(1)
           
-          
           Spacer()
           
           // 하트 버튼
@@ -33,43 +32,16 @@ struct HomeView: View {
           }
           
           // 종이비행기 버튼
-          Button(action: {}) {
+          Button(action: {
+            
+          }) {
             Image(systemName: "paperplane")
           }
         }
         .padding()
-//        .background(Color.gray.opacity(0.2))
+        .background(Color.gray.opacity(0.2))
         
-        // 캘린더
-        if store.showCalendar {
-          ZStack {
-            // 달력 배경
-            Color.white
-              .cornerRadius(10)
-              .shadow(radius: 5)
-              .scaleEffect(store.calendarScale)
-            //              .gesture(
-            //                MagnificationGesture(minimumScale: 0.1, maximumScale: 10)
-            //                  .onChanged { scale in
-            //                    store.send(.calendarScaled(scale: scale))
-            //                  }
-            //              )
-            
-            // 캘린더 내용
-            //              CalendarView(
-            //                date: Date(),
-            //                onDaySelected: { date in
-            //                  viewStore.send(.daySelected(date: date))
-            //                }
-            //              )
-            //              .frame(width: 300, height: 300)
-            //              .padding()
-            //              .scaleEffect(viewStore.calendarScale)
-          }
-          .frame(maxWidth: .infinity, alignment: .center)
-          .padding()
-          .transition(.scale)
-        }
+        Spacer()
       }
     }
     .navigationBarTitle("홈")
