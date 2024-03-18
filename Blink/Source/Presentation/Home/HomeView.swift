@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import HorizonCalendar
 
 struct HomeView: View {
   let store: StoreOf<HomeReducer>
@@ -46,13 +47,38 @@ struct HomeView: View {
         .padding(.leading)
         
         ScrollView {
-          
+          HorizonCalendarView(initialContent: makeContent())
         }
         .frame(width: .infinity, height: .infinity)
         .ignoresSafeArea()
       }
     }
     .navigationBarTitle("홈")
+  }
+  
+  // MARK: - Functions
+  func makeContent() -> CalendarViewContent {
+    let startDate = Calendar.current.date(byAdding: .year, value: -2, to: Date())!
+    let endDate = Calendar.current.date(byAdding: .year, value: 2, to: Date())!
+    
+    return CalendarViewContent(
+      calendar: Calendar.current,
+      visibleDateRange: startDate...endDate, // 캘린더에 보여줄 날짜 범위
+      monthsLayout: .horizontal(options: .init()) // 또는 .vertical사용 가능
+    )
+    .dayItemProvider { day in
+        Text("\(day.day)")
+            .font(.system(size: 18))
+            .foregroundColor(Color(UIColor.green))
+            .calendarItemModel // 끝에 붙여주기
+    }
+    .monthHeaderItemProvider { month in
+        Text("\(month.month)월")
+            .padding()
+            .background(.blue)
+            .calendarItemModel // 끝에 붙여주기
+    }
+
   }
 }
 
