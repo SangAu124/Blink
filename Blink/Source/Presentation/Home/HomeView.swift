@@ -48,8 +48,9 @@ struct HomeView: View {
         
         ScrollView {
           HorizonCalendarView(initialContent: makeContent())
+            .frame(width: UIScreen.main.bounds.size.width, height: 445)
         }
-        .frame(width: .infinity, height: .infinity)
+        .background(Color.red)
         .ignoresSafeArea()
       }
     }
@@ -66,21 +67,25 @@ struct HomeView: View {
       visibleDateRange: startDate...endDate, // 캘린더에 보여줄 날짜 범위
       monthsLayout: .horizontal(options: .init()) // 또는 .vertical사용 가능
     )
-    .dayItemProvider { day in
-        Text("\(day.day)")
-            .font(.system(size: 18))
-            .foregroundColor(Color(UIColor.green))
-            .calendarItemModel // 끝에 붙여주기
-    }
     .monthHeaderItemProvider { month in
+      HStack {
         Text("\(month.month)월")
-            .padding()
-            .background(.blue)
-            .calendarItemModel // 끝에 붙여주기
+          .font(.system(size: 24))
+          .padding(.horizontal)
+        Spacer()
+      }
+      .calendarItemModel // 끝에 붙여주기
     }
-
+    .dayItemProvider { day in
+      Text("\(day.day)")
+        .font(.system(size: 18))
+        .foregroundColor(Color(UIColor.black))
+        .calendarItemModel // 끝에 붙여주기
+    }
+    
   }
 }
+
 
 #Preview {
   HomeView(store: Store(initialState: HomeReducer.State()) {})
