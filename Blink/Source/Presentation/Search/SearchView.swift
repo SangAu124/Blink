@@ -17,6 +17,9 @@ struct SearchView: View {
       VStack {
         SearchBar(text: store.state.searchQuery)
           .padding()
+        List(store.state.searchResults) { result in
+                // ...
+              }
         Spacer()
       }
     }
@@ -85,7 +88,7 @@ struct SearchReducer {
   }
 }
 
-struct SearchResult: Equatable {
+struct SearchResult: Equatable, Identifiable {
   let id: Int
   let title: String
   let description: String
