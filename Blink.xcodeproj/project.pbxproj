@@ -26,6 +26,7 @@
 		8EBFDC782B9FDA37007D86CE /* BlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFDC772B9FDA37007D86CE /* BlinkTests.swift */; };
 		8EBFDC822B9FDA37007D86CE /* BlinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFDC812B9FDA37007D86CE /* BlinkUITests.swift */; };
 		8EBFDC842B9FDA37007D86CE /* BlinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFDC832B9FDA37007D86CE /* BlinkUITestsLaunchTests.swift */; };
+		8EE906BB2BB10A4D00292ADB /* NewDiaryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE906BA2BB10A4D00292ADB /* NewDiaryReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8EBFDC7D2B9FDA37007D86CE /* BlinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBFDC812B9FDA37007D86CE /* BlinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkUITests.swift; sourceTree = "<group>"; };
 		8EBFDC832B9FDA37007D86CE /* BlinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EE906BA2BB10A4D00292ADB /* NewDiaryReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiaryReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA5A09E2BA187190025220D /* NewDiaryView.swift */,
+				8EE906BA2BB10A4D00292ADB /* NewDiaryReducer.swift */,
 			);
 			path = NewDiary;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				8EA5A08F2B9FE3080025220D /* dummyData.swift in Sources */,
 				8EA5A09F2BA187190025220D /* NewDiaryView.swift in Sources */,
 				8EA5A0A42BA18D710025220D /* HomeReducer.swift in Sources */,
+				8EE906BB2BB10A4D00292ADB /* NewDiaryReducer.swift in Sources */,
 				8EA5A09B2BA186E70025220D /* MyPageView.swift in Sources */,
 				8EA5A08D2B9FE2FA0025220D /* dummyDomain.swift in Sources */,
 				8EBFDC692B9FDA35007D86CE /* ContentView.swift in Sources */,

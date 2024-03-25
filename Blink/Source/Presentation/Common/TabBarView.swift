@@ -25,7 +25,9 @@ struct TabBarView: View {
         Image(systemName: "magnifyingglass")
         Text("검색")
       }.tag(1)
-      NewDiaryView().tabItem {
+      NewDiaryView(
+        store: Store(initialState: NewDiaryReducer.State()) {}
+      ).tabItem {
         Image(systemName: "plus.square")
         Text("일기기록")
       }.tag(4)
