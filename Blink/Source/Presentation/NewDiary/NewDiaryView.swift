@@ -15,10 +15,8 @@ struct NewDiaryView: View {
   var body: some View {
     ZStack {
       // 카메라 프리뷰
-      GeometryReader { geometry in
-        AVCaptureVideoPreviewLayer(session: AVCaptureSession())
-          .frame(width: geometry.size.width, height: geometry.size.height)
-      }
+      AVCaptureVideoPreviewLayer(session: AVCaptureSession())
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
       
       // 촬영 버튼
       Button(action: {
