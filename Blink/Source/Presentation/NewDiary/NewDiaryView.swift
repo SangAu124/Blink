@@ -15,8 +15,8 @@ struct NewDiaryView: View {
   var body: some View {
     ZStack {
       // 카메라 프리뷰
-      AVCaptureVideoPreviewLayer(session: AVCaptureSession())
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+      // MARK: - https://github.com/enebin/Aespa
+      /// 위 라이브러리 사용하여  CameraView 업데이트 예정
       
       // 촬영 버튼
       Button(action: {
