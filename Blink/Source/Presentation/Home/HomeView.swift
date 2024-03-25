@@ -19,7 +19,7 @@ struct HomeView: View {
         HStack {
           // 앱 로고
           Image("app_logo")
-          Text("블링블링 Blink")
+          Text("대충 앱 로고")
             .bold()
             .lineLimit(1)
             .font(.title3)
@@ -49,9 +49,20 @@ struct HomeView: View {
         ScrollView {
           HorizonCalendarView(initialContent: makeContent())
             .frame(width: UIScreen.main.bounds.size.width, height: 445)
+          
+          Circle()
+            .frame(width: 250, height: 250)
+          Circle()
+            .frame(width: 250, height: 250)
+          Circle()
+            .frame(width: 250, height: 250)
+          Circle()
+            .frame(width: 250, height: 250)
+          Circle()
+            .frame(width: 250, height: 250)
+          Circle()
+            .frame(width: 250, height: 250)
         }
-        .background(Color.red)
-        .ignoresSafeArea()
       }
     }
     .navigationBarTitle("홈")

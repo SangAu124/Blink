@@ -19,7 +19,9 @@ struct TabBarView: View {
         Image(systemName: "house")
         Text("홈")
       }.tag(0)
-      SearchView().tabItem {
+      SearchView(
+        store: Store(initialState: SearchReducer.State()) {}
+      ).tabItem {
         Image(systemName: "magnifyingglass")
         Text("검색")
       }.tag(1)
